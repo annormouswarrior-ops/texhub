@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Beaker, FileText, History, Book, BarChart2, Users, Layers, Settings, Clock, Lightbulb, Save, Printer, TrendingUp, HelpCircle, Heart, MessageCircle, Package } from 'lucide-react';
+import { Beaker, FileText, History, Book, BarChart2, Users, Layers, Settings, Clock, Lightbulb, Save, Printer, TrendingUp, HelpCircle, Heart, MessageCircle, Package, ShoppingCart } from 'lucide-react';
 import { motion, useSpring, useTransform, MotionValue } from 'framer-motion';
 import { AnalyticsDashboard } from '../components/AnalyticsDashboard'; // Updated import
 
@@ -203,6 +203,15 @@ export function LandingPage() {
                   description="Track and manage your textile inventory, chemicals, and supplies."
                   path="/inventory"
                   color="teal"
+                />
+              </motion.div>
+              <motion.div variants={itemVariants}>
+                <ActionCard
+                  icon={ShoppingCart}
+                  title="Order Management"
+                  description="Process orders from receipt to delivery with full production tracking."
+                  path="/order-management"
+                  color="blue"
                 />
               </motion.div>
               <motion.div variants={itemVariants}>

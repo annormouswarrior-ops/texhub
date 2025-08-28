@@ -8,6 +8,7 @@ import { Settings } from './pages/Settings';
 import { SocialPortal } from './pages/SocialPortal'; // Changed to named import
 import { AuthPage } from './pages/AuthPage';
 import { InventoryManagement } from './pages/InventoryManagement';
+import { OrderManagement } from './pages/OrderManagement';
 import { Sidebar } from './components/Sidebar';
 import { auth } from './lib/firebaseConfig';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -110,6 +111,12 @@ function App() {
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.3 }}
                       ><InventoryManagement user={user} /></motion.div>} />
+                      <Route path="/order-management" element={<motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ duration: 0.3 }}
+                      ><OrderManagement user={user} /></motion.div>} />
                       <Route path="/settings" element={<motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}

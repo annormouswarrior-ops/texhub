@@ -68,6 +68,7 @@ export const defaultSettings: UserSettings = {
     'dyeing-calculator',
     'proforma-invoice',
     'inventory',
+    'order-management',
     'social-portal',
     'settings'
   ],
@@ -76,6 +77,7 @@ export const defaultSettings: UserSettings = {
     'dyeing-calculator',
     'proforma-invoice',
     'inventory',
+    'order-management',
     'social-portal',
     'settings'
   ],

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom'; // Alias Link to avoid conflict with motion.Link
-import { Beaker, FileText, Home, LogOut, ChevronLeft, ChevronRight, Settings, Book, Printer, Users, Facebook, Twitter, Instagram, Linkedin, Package } from 'lucide-react';
+import { Beaker, FileText, Home, LogOut, ChevronLeft, ChevronRight, Settings, Book, Printer, Users, Facebook, Twitter, Instagram, Linkedin, Package, ShoppingCart } from 'lucide-react';
 import { Button } from './ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { auth } from '../lib/firebaseConfig';
@@ -36,6 +36,7 @@ export function Sidebar({ isCollapsed, onCollapse, enabledMenuItems, menuOrder }
     { name: 'Dyeing Calculator', icon: Beaker, path: '/dyeing-calculator', id: 'dyeing-calculator' },
     { name: 'Proforma Invoice', icon: FileText, path: '/proforma-invoice', id: 'proforma-invoice' },
     { name: 'Inventory Management', icon: Package, path: '/inventory', id: 'inventory' },
+    { name: 'Order Management', icon: ShoppingCart, path: '/order-management', id: 'order-management' },
     { name: 'Social Portal', icon: Users, path: '/social-portal', id: 'social-portal' },
     { name: 'Settings', icon: Settings, path: '/settings', id: 'settings' },
   ];
