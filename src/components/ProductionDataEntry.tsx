@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { input } from './ui/input';
-import { Clock, User, Settings, BarChart3, AlertTriangle, Beaker } from 'lucide-react';
+import { Clock, User, Settings, BarChart3, AlertTriangle, Beaker, Calendar } from 'lucide-react';
 import { ProductionEntry } from '../types/production';
 
 interface ProductionDataEntryProps {
