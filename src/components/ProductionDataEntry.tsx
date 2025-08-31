@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
-import { input } from './ui/input';
-import { Clock, User, Settings, BarChart3, AlertTriangle, Beaker, Calendar } from 'lucide-react';
+import { Input } from './ui/input';
+import { Clock, User, Settings, BarChart3, AlertTriangle, Beaker, Calendar, Timer } from 'lucide-react';
 import { ProductionEntry } from '../types/production';
 
 interface ProductionDataEntryProps {
@@ -70,14 +70,19 @@ export const ProductionDataEntry: React.FC<ProductionDataEntryProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Date</label>
               <div className="relative">
-                <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4 z-10" />
+                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
+                  <Calendar className="h-5 w-5 text-blue-500" />
+                </div>
                 <input
-                type="date"
-                value={formData.date || ''}
-                onChange={(e) => handleInputChange('date', e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-border shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background text-foreground transition-all duration-200 hover:border-primary/50 font-medium"
-                required
-              />
+                  type="date"
+                  value={formData.date || ''}
+                  onChange={(e) => handleInputChange('date', e.target.value)}
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 shadow-sm focus:border-blue-500 focus:ring-4 focus:ring-blue-100 bg-white text-gray-800 transition-all duration-300 hover:border-blue-300 hover:shadow-md font-medium text-sm"
+                  required
+                />
+                <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                </div>
               </div>
             </div>
             <div>
@@ -138,27 +143,37 @@ export const ProductionDataEntry: React.FC<ProductionDataEntryProps> = ({
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Start Time</label>
               <div className="relative">
-                <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4 z-10" />
+                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
+                  <Clock className="h-5 w-5 text-green-500" />
+                </div>
                 <input
-                type="time"
-                value={formData.startTime || ''}
-                onChange={(e) => handleInputChange('startTime', e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-border shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background text-foreground transition-all duration-200 hover:border-primary/50 font-medium"
-                required
-              />
+                  type="time"
+                  value={formData.startTime || ''}
+                  onChange={(e) => handleInputChange('startTime', e.target.value)}
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 shadow-sm focus:border-green-500 focus:ring-4 focus:ring-green-100 bg-white text-gray-800 transition-all duration-300 hover:border-green-300 hover:shadow-md font-medium text-sm"
+                  required
+                />
+                <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                </div>
               </div>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">End Time</label>
               <div className="relative">
-                <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4 z-10" />
+                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
+                  <Timer className="h-5 w-5 text-orange-500" />
+                </div>
                 <input
-                type="time"
-                value={formData.endTime || ''}
-                onChange={(e) => handleInputChange('endTime', e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-border shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 bg-background text-foreground transition-all duration-200 hover:border-primary/50 font-medium"
-                required
-              />
+                  type="time"
+                  value={formData.endTime || ''}
+                  onChange={(e) => handleInputChange('endTime', e.target.value)}
+                  className="w-full pl-12 pr-4 py-3 rounded-xl border-2 border-gray-200 shadow-sm focus:border-orange-500 focus:ring-4 focus:ring-orange-100 bg-white text-gray-800 transition-all duration-300 hover:border-orange-300 hover:shadow-md font-medium text-sm"
+                  required
+                />
+                <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+                </div>
               </div>
             </div>
             <div>
