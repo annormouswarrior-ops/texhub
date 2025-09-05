@@ -651,6 +651,7 @@ const AVAILABLE_MENU_ITEMS = [
   { id: 'inventory', label: 'Inventory Management', icon: 'Package' },
   { id: 'order-management', label: 'Order Management', icon: 'ShoppingCart' },
   { id: 'production-data', label: 'Production Data', icon: 'BarChart3' },
+  { id: 'dyeing-planning', label: 'Dyeing Planning', icon: 'Calendar' },
   { id: 'social-portal', label: 'Social Portal', icon: 'Users' },
   { id: 'settings', label: 'Settings', icon: 'Settings' },
 ];

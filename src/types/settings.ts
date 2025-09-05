@@ -70,6 +70,7 @@ export const defaultSettings: UserSettings = {
     'inventory',
     'order-management',
     'production-data',
+    'dyeing-planning',
     'social-portal',
     'settings'
   ],
@@ -80,6 +81,7 @@ export const defaultSettings: UserSettings = {
     'inventory',
     'order-management',
     'production-data',
+    'dyeing-planning',
     'social-portal',
     'settings'
   ],

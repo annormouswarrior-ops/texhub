@@ -10,6 +10,7 @@ import { AuthPage } from './pages/AuthPage';
 import { InventoryManagement } from './pages/InventoryManagement';
 import { OrderManagement } from './pages/OrderManagement';
 import { ProductionDataManagement } from './pages/ProductionDataManagement';
+import { DyeingPlanning } from './pages/DyeingPlanning';
 import { Sidebar } from './components/Sidebar';
 import { auth } from './lib/firebaseConfig';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -124,6 +125,12 @@ function App() {
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.3 }}
                       ><ProductionDataManagement user={user} /></motion.div>} />
+                      <Route path="/dyeing-planning" element={<motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ duration: 0.3 }}
+                      ><DyeingPlanning user={user} /></motion.div>} />
                       <Route path="/settings" element={<motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}

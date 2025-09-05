@@ -14,6 +14,7 @@ export default {
     'bg-gray-100',
     'bg-yellow-100',
     'bg-teal-100',
+    'bg-indigo-100',
     // Safelist for icon text colors
     'text-blue-600',
     'text-green-600',
@@ -23,6 +24,7 @@ export default {
     'text-gray-600',
     'text-yellow-600',
     'text-teal-600',
+    'text-indigo-600',
   ],
   theme: {
     extend: {
